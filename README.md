@@ -100,13 +100,22 @@ Uses the same body as `/api/match`.
 ### Render
 
 1. Push this folder to GitHub.
-2. Create a new Render Web Service.
-3. Connect the GitHub repository.
-4. Use:
+2. Create a MongoDB Atlas database and copy its connection string.
+3. Create an OpenRouter API key.
+4. Create a new Render Web Service and connect the GitHub repository.
+5. Use:
    - Build Command: `npm install && npm run build`
    - Start Command: `npm start`
-5. Add environment variables from `.env.example`.
-6. Use MongoDB Atlas for `MONGODB_URI`.
+6. Add environment variables:
+   - `NODE_VERSION`: `20`
+   - `MONGODB_URI`: your MongoDB Atlas connection string
+   - `OPENROUTER_API_KEY`: your OpenRouter key
+   - `OPENROUTER_MODEL`: `openrouter/free`
+   - `SITE_NAME`: `Candidate Shortlisting System`
+   - `SITE_URL`: your Render app URL after the first deploy
+7. After the first deploy, copy the Render URL, set it as `SITE_URL`, then redeploy.
+
+You can also use `render.yaml` as a Render Blueprint. Keep secrets such as `MONGODB_URI` and `OPENROUTER_API_KEY` in the Render dashboard, not in GitHub.
 
 ### Railway
 

@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: candidate-shortlisting-system
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: OPENROUTER_MODEL
+        value: openrouter/free
+      - key: SITE_NAME
+        value: Candidate Shortlisting System
+      - key: MONGODB_URI
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: SITE_URL
+        sync: false

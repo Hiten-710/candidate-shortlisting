@@ -335,7 +335,7 @@ async function start() {
     console.warn("MONGODB_URI not set, using memory store.");
   }
 
-  app.listen(PORT, () => {
+  app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on port ${PORT}`);
   });
 }
