@@ -42,7 +42,7 @@ If `MONGODB_URI` is not set, the server uses demo in-memory candidates.
 PORT=5000
 MONGODB_URI=mongodb+srv://USER:PASSWORD@cluster.mongodb.net/candidate-shortlist
 OPENROUTER_API_KEY=your_openrouter_api_key
-OPENROUTER_MODEL=openrouter/free
+OPENROUTER_MODEL=nvidia/nemotron-3-super:free
 SITE_URL=https://your-deployed-url.com
 SITE_NAME=Candidate Shortlisting System
 ```
@@ -110,7 +110,7 @@ Uses the same body as `/api/match`.
    - `NODE_VERSION`: `20`
    - `MONGODB_URI`: your MongoDB Atlas connection string
    - `OPENROUTER_API_KEY`: your OpenRouter key
-   - `OPENROUTER_MODEL`: `openrouter/free`
+   - `OPENROUTER_MODEL`: `nvidia/nemotron-3-super:free`
    - `SITE_NAME`: `Candidate Shortlisting System`
    - `SITE_URL`: your Render app URL after the first deploy
 7. After the first deploy, copy the Render URL, set it as `SITE_URL`, then redeploy.
